@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Centralizando tudo */
+  body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: palevioletred;
+  }
+  
+  .container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  /* Estilo do carrossel */
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transição suave */
+    width: 100%; /* O contêiner ajusta conforme os slides */
+  }
+  
+  /* Cada imagem ocupa 100% da largura do carrossel */
+  .slides img {
+    flex: 0 0 100%; /* Cada imagem ocupa 100% do espaço */
+    max-width: 100%; /* Respeita o tamanho do contêiner pai */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: contain; /* Ajusta sem distorcer */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    .carousel {
+      max-width: 280px;
+    }
+  
+    .slides img {
+      max-width: 200px;
+    }
+  }
+  
